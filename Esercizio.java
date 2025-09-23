@@ -1,26 +1,102 @@
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
-
-//Import di Classi Java necessarie al funzionamento del programma
 import java.util.Scanner;
 
-// Classe principale, con metodo main
-class Esercizio {
-    // Il programma parte con una chiamata a main().
-    public static void main(String args[])
-    {
-        //Variabili del programma
-        String nome;
+public static int leggicomando(){
+    String c;
+    do {
+        System.out.println("[I] Inserisci elemento | [E] Elimina elemento | [R] RicercaNelVettore | [D] Elimina duplicati | [V] Visualizza vettore | [X] Esci");
 
-        //Creo l'oggetto in per l'input da tastiera
-        Scanner in = new Scanner( System.in );
-
-        //Leggo l'input da tastiera
-        System.out.print("Inserisci il tuo nome: ");
-        nome = in.nextLine();
-
-        //Output del nome acquisito da tastiera
-        System.out.println("Ciao "+nome+"!");
-    }
+    } while(c!="I" && c!="E" && c!="R" && c!="D" && c!="V" && c!="X");
+    return c;
 }
 
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
+ public static int ricercaNelVettore (int [] V =new int [] , int valore,N){
+
+}
+
+public static int InserisciElemento (int [] V =new int [] , int N,e,ie ){
+
+}
+
+public static int EliminaElemento (int [] V =new int [] , int N,ie ){
+
+    return N2;
+
+
+
+    public static void  visualizzaVettore (int [] V =new int []){
+
+ 
+    }
+
+    public static void azzeraVettore (int [] V =new int [] , int valore){
+
+ 
+    }
+
+    public static int EliminaDuplicati (int [] V =new int [] ,int N){
+
+    }
+
+
+
+
+
+
+class Esercizio {
+
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner( System.in );
+        int i, N, e;
+        String c;
+        System.out.println("Inserisci dimensione del vettore");
+        N = in.nextLine();
+        int [] V =new int [N*10];
+        azzeraVettore(V,N);
+        do {
+            c=leggicomando();
+
+            if (c = "I"){
+                System.out.println("Inserisci elemento");
+                e = in.nextLine();
+                do {
+                    System.out.println("Inserisci posizione");
+                    i = in.nextline();
+                }while(i<0 or i>=N);ù
+                N=InserisciElemento(V,n,e,i);
+            }
+
+            if (c = "E"){
+                do {
+                    System.out.println("Inserire cella del vettore che desideri eliminare");
+                    i = in.nextLine();
+                }while(i<0 or i>=N);
+                N=EliminaElemento(V,N,i)
+            }
+
+            if (c = "R"){
+                System.out.println("Inserisci elemento da cercare");
+                e=in.nextline();
+                i=ricercaNelVettore(V,N,e);
+                if (i >=0){
+                    System.out.println("L'elemento " +e+ "si trova nella posizione " +i);
+                }
+                else {
+                    System.out.println("L'elemento " +e+ "non è stato trovato ");
+                }
+
+            }
+
+            if (c = "D"){
+               System.out.println("Rimozione dei duplicati");
+               N=EliminaDuplicati(V,N);
+            }
+
+            if (c = "V"){
+                VisualizzaVettore(V,N);
+            }
+
+        } while (c!= "X");
+ 
+    }
+}
