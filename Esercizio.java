@@ -9,36 +9,27 @@ public static int leggicomando(){
     return c;
 }
 
- public static int ricercaNelVettore (int [] V =new int [] , int valore,N){
-
+ public static ricercaElemento (int [] V =new int [] , int N,int Elementodacercare) {
+    int i;
+    i = 0;
+    while(i<N && V[i]!= e){
+        if (i = N){
+            i-1;
+        }
+        i++;
+    }
 }
 
-public static int InserisciElemento (int [] V =new int [] , int N,e,ie ){
 
+ public static int InserisciElemento(int [] V,int N,int e,int ipos) {
+    int i;
+    i = 0;
+    for (i=N ,i > 0, --i){
+        V[i]=V[i-1];
+        }
+        V [ipos]=e;
+    }
 }
-
-public static int EliminaElemento (int [] V =new int [] , int N,ie ){
-
-    return N2;
-
-
-
-    public static void  visualizzaVettore (int [] V =new int []){
-
- 
-    }
-
-    public static void azzeraVettore (int [] V =new int [] , int valore){
-
- 
-    }
-
-    public static int EliminaDuplicati (int [] V =new int [] ,int N){
-
-    }
-
-
-
 
 
 
