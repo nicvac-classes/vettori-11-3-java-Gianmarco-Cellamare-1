@@ -23,13 +23,26 @@ public static int leggicomando(){
 
  public static int InserisciElemento(int [] V,int N,int e,int ipos) {
     int i;
-    i = 0;
-    for (i=N ,i > 0, --i){
+    i = N;
+    while(i>ipos){
         V[i]=V[i-1];
+        --i;
         }
         V [ipos]=e;
+        return++N;
     }
-}
+
+ public static int EliminaElemento(int [] V,int N,int ipos) {
+    int i,N2;
+    N2=N-1;
+    i=ipos;
+    while(i<=N2){
+        V[i]=V[i+1];
+        ++i;
+        }
+        return++N2;
+    }
+
 
 
 
