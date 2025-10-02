@@ -9,38 +9,62 @@ public static int leggicomando(){
     return c;
 }
 
- public static ricercaElemento (int [] V =new int [] , int N,int Elementodacercare) {
-    int i;
-    i = 0;
-    while(i<N && V[i]!= e){
-        if (i = N){
-            i-1;
+ public static int ricercaNelVettore (int [] V =new int [] , int valore,N){
+    int i,iTrovato;
+    i=0;
+    iTrovato=-1;
+    while (i<N and iTrovato==-1){
+        if (V[i] == valore) {
+            iTrovato=i;
+            i=i+1;
         }
-        i++;
     }
+    return iTrovato;
 }
 
-
- public static int InserisciElemento(int [] V,int N,int e,int ipos) {
-    int i;
-    i = N;
-    while(i>ipos){
+public static int InserisciElemento (int [] V =new int [] , int N,e,ie ){
+    int i,N2;
+    N2=N+1;
+    i=N2-1;
+    while (i>=ie+1){
         V[i]=V[i-1];
-        --i;
+        i=i+1;
+    }
+    V[ie]=e;
+    return N2;
+
+}
+
+public static int EliminaElemento (int [] V =new int [] , int N,ie ){
+    int N2;
+    N2=N-1;
+    i=ie;
+    while (i<=N-2){
+        V[i]=V[i+1];
+        i=i+1;
+    }
+    return N2;
+
+
+
+    public static void  visualizzaVettore (int [] V =new int []){
+        int i;
+        i=0;
+        while ("i<N"){
+            System.out.println("V[i]");
+            i=i+1;
         }
-        V [ipos]=e;
-        return++N;
+ 
     }
 
- public static int EliminaElemento(int [] V,int N,int ipos) {
-    int i,N2;
-    N2=N-1;
-    i=ipos;
-    while(i<=N2){
-        V[i]=V[i+1];
-        ++i;
+    public static void azzeraVettore (int [] V =new int [] , int valore){
+        int i;
+        i=0;
+        while ("i<N-1"){
+            V[i]=0;
+            i=i+1;
         }
-        return++N2;
+ 
     }
 
 
@@ -104,3 +128,6 @@ class Esercizio {
  
     }
 }
+
+
+
