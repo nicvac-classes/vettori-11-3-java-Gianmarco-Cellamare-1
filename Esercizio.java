@@ -64,6 +64,41 @@ public static int EliminaElemento (int [] V =new int [] , int N,ie ){
             V[i]=0;
             i=i+1;
         }
+
+     public static int rimuoviDuplicati(int[] v, int n) {
+        boolean duplicato;
+        int i, j, k;
+
+        k = 0;
+        int[] w = new int[n];
+
+        i = 0;
+        while (i <= n - 1) {
+            duplicato = false;
+            j = i + 1;
+            while (j <= n - 1 && duplicato == false) {
+                if (v[i] == v[j]) {
+                    duplicato = true;
+                }
+                j = j + 1;
+            }
+            if (duplicato == false) {
+                w[k] = v[i];
+                k = k + 1;
+            } else {
+
+            }
+            i = i + 1;
+        }
+
+        i = 0;
+        while (i < k) {
+            v[i] = w[i];
+            i = i + 1;
+        }
+        
+        return k;
+    }
  
     }
 
